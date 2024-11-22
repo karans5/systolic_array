@@ -1,0 +1,15 @@
+SIM ?= verilator
+TOPLEVEL_LANG ?= verilog
+
+PWD=$(shell pwd)
+
+export PYTHONPATH:=$(PWD)/systolic_array_verif:$(PYTHONPATH)
+
+VERILOG_SOURCES=$(PWD)/verilog/*.v
+
+EXTRA_ARGS = --trace --trace-structs
+
+TOPLEVEL = mkSystolicArray
+MODULE   := test_systolic_array
+
+include $(shell cocotb-config --makefiles)/Makefile.sim
