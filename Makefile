@@ -4,7 +4,9 @@ BSCDEFINES=RV64
 VERILOGDIR=verilog/
 BUILDDIR=intermediate/
 
-#include systolic_array_verif/Makefile.verif
+include systolic_array_verif/Makefile.verif
+
+export PYTHONPATH:=$(PWD):$(PYTHONPATH)
 
 
 .PHONY: clone_mac
