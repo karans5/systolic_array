@@ -1,0 +1,15 @@
+SIM ?= verilator
+TOPLEVEL_LANG ?= verilog
+
+PWD=$(shell pwd)
+
+export PYTHONPATH:=$(PWD)/../mac/mac_verif:$(PWD)/../systolic_array_verif:$(PWD):$(PYTHONPATH)
+
+VERILOG_SOURCES=$(PWD)/verilog/*.v /home/karan/bluespec/bsc/inst/lib/Verilog/FIFO2.v /home/karan/bluespec/bsc/inst/lib/Verilog/SizedFIFO.v
+
+EXTRA_ARGS = --trace --trace-structs -Wno-TIMESCALEMOD -Wno-WIDTH -Wno-STMTDLY
+
+TOPLEVEL = mkSystolic_Array
+MODULE   = systolic_array_verif.test_systolic_array
+
+include $(shell cocotb-config --makefiles)/Makefile.sim
