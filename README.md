@@ -70,6 +70,12 @@ Input data flows through the array in a systolic pattern:
 - Matrix B elements flow vertically
 - Results accumulate and propagate through the array
 
+## Assignment 2
+
+- int32: code - completed, verification - not-completed
+- bfloat16: code - completed, verification - not-completed
+
 ## Contributing
 
 Feel free to submit issues and enhancement requests.
+
