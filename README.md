@@ -28,6 +28,22 @@ systolic_array/
   - Vertical flow for matrix B
   - Cascaded accumulation for results
 
+## Project Status
+
+1. **Integer (32-bit)**
+   - Code Implementation: Completed
+   - Verification: Partially Completed
+     - Coverpoints: Not-Completed
+     - Cocotb Test: Completed
+     - Reference Model: Completed
+
+2. **BFloat16**
+   - Code Implementation: Completed
+   - Verification: Partially Completed
+     - Coverpoints: Not-Completed
+     - Cocotb Test: Completed
+     - Reference Model: Completed
+
 ## Prerequisites
 
 - Bluespec Compiler (bsc)
@@ -69,11 +85,6 @@ Input data flows through the array in a systolic pattern:
 - Matrix A elements flow horizontally
 - Matrix B elements flow vertically
 - Results accumulate and propagate through the array
-
-## Assignment 2
-
-- int32: code - completed, verification - not-completed
-- bfloat16: code - completed, verification - not-completed
 
 ## Contributing
 
