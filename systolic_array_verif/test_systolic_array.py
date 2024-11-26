@@ -251,4 +251,4 @@ async def test_systolic_array(dut):
         await RisingEdge(dut.CLK)
     
     # Export coverage data
-    coverage_db.export_to_yaml(filename="coverage_systolic_array.yml")
+    #coverage_db.export_to_yaml(filename="coverage_systolic_array.yml")
